@@ -1,0 +1,252 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    background-color: #121212;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 40px;
+    transition: background-color .95s;
+    color: white;
+}
+
+.container {
+    width: 350px;
+    height: 350px;
+
+    border: 4px solid #424242;
+    border-radius: 50%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    box-shadow: -4px -3px 45px 8px rgba(150,150,150,0.35), inset 4px 0 8px rgba(50,50,50, 0.9), inset -4px 0 8px rgba(50,50,50, 0.9), inset 0 4px 8px rgba(50,50,50, 0.9), inset 0 -4px 8px rgba(50,50,50, 0.9);
+}
+.shadow {
+    box-shadow: -4px -3px 45px 8px rgba(0,0,0,0.35), inset 4px 0 10px rgba(0,0,0,0.9), inset -4px 0 10px rgba(0,0,0,0.9), inset 0 4px 10px rgba(66,66,66,0.35), inset 0 -4px 10px rgba(66,66,66,0.35);
+}
+
+.hour-hand {
+    width: 8px;
+    height: 25%;
+    background-color: white;
+    border-radius: 10px;
+
+    position: absolute;
+    bottom: 50%;
+
+    transition: background-color 1s;
+}
+
+.minute-hand {
+    width: 4px;
+    height: 35%;
+    background-color: red;
+    border-radius: 8px;
+    
+    position: absolute;
+    bottom: 50%;
+    z-index: 50;
+}
+
+.second-hand {
+    width: 1px;
+    height: 45%;
+    background-color: aqua;
+    border-radius: 50%;
+
+    position: absolute;
+    bottom: 50%;
+    z-index: 99;
+    /* transition: transform 1s linear; */
+}
+
+.center {
+    width: 16px;
+    height: 16px;
+    background-color: aqua;
+    border-radius: 50%;
+    position: absolute;
+    z-index: 77;
+}
+
+.animate {
+    transform-origin: bottom;
+}
+
+.twelve {
+    width: 8px;
+    height: 30px;
+    background-color: yellow;
+    border-radius: 100px;
+    position: absolute;
+    top: 0;
+}
+.three {
+    width: 30px;
+    height: 8px;
+    background-color: yellow;
+    border-radius: 100px;
+    position: absolute;
+    right: 0;
+}
+.six {
+    width: 8px;
+    height: 30px;
+    background-color: yellow;
+    border-radius: 100px;
+    position: absolute;
+    bottom: 0;
+}
+.nine {
+    width: 30px;
+    height: 8px;
+    background-color: yellow;
+    border-radius: 100px;
+    position: absolute;
+    left: 0;
+}
+.time {
+    margin: 20px
+}
+.extend {
+    height: 120%;
+    background-color: aqua;
+}
+
+
+#theme {
+    width: 70px;
+    background-color: white;
+    border-radius: 50px;
+    margin-top: 50px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    transition: background-color 1s ease-in-out;
+}
+#circle {
+    width: 40px;
+    height: 40px;
+    border-radius: 50px;
+    background-color: black;
+    color: white;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: transform .5s ease-in-out, background-color 1s ease-in-out;
+    /* transform: translateX(-2%); */
+}
+.btn-toggle {
+    transform: translateX(75%);
+}
+
+.time1 {
+    width: 10px;
+    height: 10px;
+    z-index: 44;
+    position: absolute;
+
+    border-radius: 50%;
+    background: palegreen;
+
+    top: 8%;
+    right: 25%;
+}
+.time2 {
+    width: 10px;
+    height: 10px;
+    z-index: 44;
+    position: absolute;
+
+    border-radius: 50%;
+    background: palegreen;
+
+    top: 25%;
+    right: 8%;
+}
+.time4 {
+    width: 10px;
+    height: 10px;
+    z-index: 44;
+    position: absolute;
+
+    border-radius: 50%;
+    background: palegreen;
+
+    bottom: 25%;
+    right: 8%;
+}
+.time5 {
+    width: 10px;
+    height: 10px;
+    z-index: 44;
+    position: absolute;
+
+    border-radius: 50%;
+    background: palegreen;
+
+    bottom: 8%;
+    right: 25%;
+}
+.time7 {
+    width: 10px;
+    height: 10px;
+    z-index: 44;
+    position: absolute;
+
+    border-radius: 50%;
+    background: palegreen;
+
+    bottom: 8%;
+    left: 25%;
+}
+.time8 {
+    width: 10px;
+    height: 10px;
+    z-index: 44;
+    position: absolute;
+
+    border-radius: 50%;
+    background: palegreen;
+
+    bottom: 25%;
+    left: 8%;
+}
+.time10 {
+    width: 10px;
+    height: 10px;
+    z-index: 44;
+    position: absolute;
+
+    border-radius: 50%;
+    background: palegreen;
+
+    top: 25%;
+    left: 8%;
+}
+.time11 {
+    width: 10px;
+    height: 10px;
+    z-index: 44;
+    position: absolute;
+
+    border-radius: 50%;
+    background: palegreen;
+
+    top: 8%;
+    left: 25%;
+}
+
+
+.glow {
+    box-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
+}
